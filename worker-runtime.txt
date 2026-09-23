@@ -18,5 +18,5 @@ export default {async fetch(request,env) {
  if(url.pathname==='/app.js') return new Response(request.method==='HEAD'?null:client,{headers:{...security,'Content-Type':'text/javascript;charset=utf-8','Cache-Control':'public,max-age=300'}});
  const path=url.pathname.endsWith('/')?url.pathname:url.pathname+'/';
  if(pages[path]) return new Response(request.method==='HEAD'?null:pages[path],{headers:{...security,'Content-Type':'text/html;charset=utf-8','Cache-Control':'public,max-age=300'}});
- return new Response(request.method==='HEAD'?null:'404 â€” Page not found. /en-IE/',{status:404,headers:{...security,'Content-Type':'text/plain;charset=utf-8'}});
+ return new Response(request.method==='HEAD'?null:'404 — Page not found. /en-IE/',{status:404,headers:{...security,'Content-Type':'text/plain;charset=utf-8'}});
 }};
