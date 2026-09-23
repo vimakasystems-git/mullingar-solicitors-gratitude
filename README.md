@@ -1,4 +1,4 @@
-# Nooney & Dowdall LLP — independent gratitude website
+# Nooney & Dowdall LLP â€” independent gratitude website
 
 A responsive, five-language redesign proposal created as a thank-you for the service received. Independently published by Vimaka Sistemas Inteligentes. This is not the firm's official website and no firm endorsement is claimed.
 
@@ -22,7 +22,7 @@ Preview: http://127.0.0.1:4173. Cloudflare entry: `dist/worker.mjs`. After authe
 
 Seven practice categories, consultation preparation, costs explanation, official Irish resources, telephone/email/map links, privacy information and gratitude statement. Contact links point directly to the firm's published contact details. Includes an opt-in AI enquiry assistant using Cloudflare Workers AI (Llama 3.3 70B). No booking submission, automated legal advice, enquiry database, analytics or advertising cookies. Hosting necessarily processes connection data. The intake asks for non-identifying facts; name and contact fields are added separately on the client at review. Visitors are instructed not to provide confidential evidence, documents, third-party names or sensitive identifiers. No search indexing until the proposal is formally adopted. No changes to the original domain or website.
 
-The hero image is an optimised local copy of the existing site's image, bundled with the Worker. The firm or its licensors retain image rights; original source is listed below. All CSS, client JavaScript and text are served by the Worker; system fonts avoid font-provider requests. A canvas mesh animates the original flock and its reflection, with pause/resume, reduced-motion support and automatic suspension off screen. It is a photo animation, not a generated video. The palette uses the original site’s #041562, #DA1212, #BAD7E9 and white.
+The hero image is an optimised local copy of the existing site's image, bundled with the Worker. The firm or its licensors retain image rights; original source is listed below. All CSS, client JavaScript and text are served by the Worker; system fonts avoid font-provider requests. A canvas mesh animates the original flock and its reflection, with pause/resume, reduced-motion support and automatic suspension off screen. It is a photo animation, not a generated video. The palette uses the original siteâ€™s #041562, #DA1212, #BAD7E9 and white.
 
 ## Sources checked 23 September 2026
 
@@ -56,5 +56,11 @@ Content is general information, not legal advice or a legal-compliance certifica
 Research did not locate a supported, documented public API for individual Irish case status. Added official High Court search, Courts Portal, judgments and record-access links. No scraping, credentials or private court data is used. Open court statistics are distinct from access to individual case files. See COURT-RESEARCH.md.
 
 ## Additional validation
+
+## Private client portal
+
+The five-language `/portal/` adds administrator invitations and revocation, encrypted client documents, local upload, mobile photo-to-PDF scanning, server-calculated service estimates with VAT, solicitor approval and written costs notices, Stripe Checkout/webhook integration, appointment slots and private meeting links. Seven test groups now cover the website, AI intake and portal. See [PORTAL-SETUP.md](PORTAL-SETUP.md) for activation, provider setup, verified features and limitations.
+
+No real administrator or client account has been created. Actual service rates, Stripe keys and Google Drive/Dropbox app identifiers must be supplied by the office. These external integrations stay disabled until configured. The database and encryption secrets are deployed; local uploads and scanning require an administrator-invited login. The private activation link is delivered outside Git.
 
 Five Node test groups cover routes, consent, origin, bounded input, role injection, model binding, no-store responses, rate limiting, unavailable provider and long-summary errors. Live synthetic enquiries validate multilingual response and English handover; no test emails are sent to the practice.

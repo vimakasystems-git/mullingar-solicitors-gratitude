@@ -1,1 +1,45 @@
-{"name":"mullingar-solicitors-gratitude","main":"dist/worker.mjs","compatibility_date":"2026-09-23","workers_dev":true,"observability":{"enabled":false},"ai":{"binding":"AI"},"ratelimits":[{"name":"INTAKE_LIMIT","namespace_id":"202609231","simple":{"limit":6,"period":60}},{"name":"INTAKE_GLOBAL","namespace_id":"202609232","simple":{"limit":60,"period":60}}]}
+{
+  "name": "mullingar-solicitors-gratitude",
+  "main": "dist/worker.mjs",
+  "compatibility_date": "2026-09-23",
+  "workers_dev": true,
+  "observability": {
+    "enabled": false
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "ratelimits": [
+    {
+      "name": "INTAKE_LIMIT",
+      "namespace_id": "202609231",
+      "simple": {
+        "limit": 6,
+        "period": 60
+      }
+    },
+    {
+      "name": "INTAKE_GLOBAL",
+      "namespace_id": "202609232",
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    },
+    {
+      "name": "PORTAL_LIMIT",
+      "namespace_id": "202609233",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "PORTAL_DB",
+      "database_name": "mullingar-client-portal",
+      "database_id": "c2136b49-95a1-48e6-8ab4-7fa524cc6890"
+    }
+  ]
+}

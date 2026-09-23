@@ -1,0 +1,18 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS portal_users(id TEXT PRIMARY KEY,email TEXT UNIQUE NOT NULL,name TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('admin','client')),active INTEGER NOT NULL DEFAULT 0,password_hash TEXT,password_salt TEXT,created_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS portal_invites(token_hash TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES portal_users(id),expires_at INTEGER NOT NULL,claim TEXT);
+CREATE TABLE IF NOT EXISTS portal_sessions(token_hash TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES portal_users(id),expires_at INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS portal_sessions_expiry ON portal_sessions(expires_at);
+CREATE TABLE IF NOT EXISTS portal_documents(id TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES portal_users(id),name TEXT NOT NULL,mime TEXT NOT NULL,size INTEGER NOT NULL,iv TEXT NOT NULL,source TEXT NOT NULL,created_at INTEGER NOT NULL,removed INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS portal_chunks(document_id TEXT NOT NULL REFERENCES portal_documents(id),part INTEGER NOT NULL,payload BLOB NOT NULL,PRIMARY KEY(document_id,part));
+CREATE TRIGGER IF NOT EXISTS document_quota BEFORE INSERT ON portal_documents WHEN (SELECT COALESCE(SUM(size),0) FROM portal_documents WHERE user_id=NEW.user_id AND removed=0)+NEW.size>26214400 OR (SELECT COUNT(*) FROM portal_documents WHERE user_id=NEW.user_id AND removed=0)>=50 BEGIN SELECT RAISE(ABORT,'document_quota'); END;
+CREATE TABLE IF NOT EXISTS portal_services(id TEXT PRIMARY KEY,name TEXT NOT NULL,unit TEXT NOT NULL,price_cents INTEGER NOT NULL CHECK(price_cents>=0),vat_bps INTEGER NOT NULL CHECK(vat_bps BETWEEN 0 AND 10000),active INTEGER NOT NULL DEFAULT 1);
+CREATE TABLE IF NOT EXISTS portal_quotes(id TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES portal_users(id),service_name TEXT NOT NULL,quantity_hundredths INTEGER NOT NULL,net_cents INTEGER NOT NULL,vat_cents INTEGER NOT NULL,total_cents INTEGER NOT NULL,status TEXT NOT NULL DEFAULT 'requested' CHECK(status IN ('requested','approved','paid','cancelled')),terms TEXT NOT NULL DEFAULT '',created_at INTEGER NOT NULL,checkout_id TEXT,checkout_url TEXT,paid_at INTEGER);
+CREATE TABLE IF NOT EXISTS portal_slots(id TEXT PRIMARY KEY,starts_at TEXT NOT NULL,ends_at TEXT NOT NULL,kind TEXT NOT NULL CHECK(kind IN ('office','video','phone')),meeting_url TEXT NOT NULL DEFAULT '',active INTEGER NOT NULL DEFAULT 1);
+CREATE UNIQUE INDEX IF NOT EXISTS unique_slot_start ON portal_slots(starts_at) WHERE active=1;
+CREATE TRIGGER IF NOT EXISTS slot_overlap BEFORE INSERT ON portal_slots WHEN NEW.active=1 AND EXISTS(SELECT 1 FROM portal_slots WHERE active=1 AND starts_at<NEW.ends_at AND ends_at>NEW.starts_at) BEGIN SELECT RAISE(ABORT,'slot_overlap'); END;
+CREATE TABLE IF NOT EXISTS portal_appointments(id TEXT PRIMARY KEY,slot_id TEXT NOT NULL REFERENCES portal_slots(id),user_id TEXT NOT NULL REFERENCES portal_users(id),status TEXT NOT NULL DEFAULT 'confirmed' CHECK(status IN ('confirmed','cancelled')),created_at INTEGER NOT NULL);
+CREATE UNIQUE INDEX IF NOT EXISTS reserved_slot ON portal_appointments(slot_id) WHERE status='confirmed';
+CREATE TABLE IF NOT EXISTS portal_events(id TEXT PRIMARY KEY,created_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS portal_audit(id TEXT PRIMARY KEY,actor TEXT NOT NULL,action TEXT NOT NULL,target TEXT NOT NULL,created_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS portal_settings(key TEXT PRIMARY KEY,value TEXT NOT NULL);

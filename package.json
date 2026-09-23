@@ -1,1 +1,11 @@
-{"name":"mullingar-solicitors-gratitude","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","dev":"node dev.mjs","test":"node --test test.mjs"}}
+{
+  "name": "mullingar-solicitors-gratitude",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node dev.mjs",
+    "test": "node --test test.mjs portal-test.mjs"
+  }
+}
