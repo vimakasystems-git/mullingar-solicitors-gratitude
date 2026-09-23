@@ -1,6 +1,15 @@
 const security = {'X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY','X-Robots-Tag':'noindex, nofollow','Content-Security-Policy':"default-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",'Permissions-Policy':'camera=(), microphone=(), geolocation=()'};
 export default {async fetch(request,env) {
  const url=new URL(request.url);
+ const chosenLanguage=request.headers.get('Cookie')?.match(/(?:^|;\s*)nd_language=(en-IE|pt-BR|pl|ro|uk)(?:;|$)/)?.[1];
+ if(url.pathname==='/language'&&request.method==='GET'){
+  const selected=['en-IE','pt-BR','pl','ro','uk'].includes(url.searchParams.get('lang'))?url.searchParams.get('lang'):'en-IE';
+  const destination=url.searchParams.get('target')==='portal'?'/portal/?lang='+selected:'/'+selected+'/';
+  return new Response(null,{status:302,headers:{...security,'Cache-Control':'no-store',Location:destination,'Set-Cookie':`nd_language=${selected}; Path=/; Secure; HttpOnly; SameSite=Lax`}});
+ }
+ const requestedLanguage=url.pathname.match(/^\/(pt-BR|pl|ro|uk)\/?$/)?.[1];
+ if(requestedLanguage&&chosenLanguage!==requestedLanguage)return new Response(null,{status:302,headers:{...security,'Cache-Control':'no-store',Location:'/en-IE/'}});
+ if(['/portal','/portal/'].includes(url.pathname)&&url.searchParams.has('lang')&&url.searchParams.get('lang')!=='en-IE'&&url.searchParams.get('lang')!==chosenLanguage){url.searchParams.set('lang','en-IE');return new Response(null,{status:302,headers:{...security,'Cache-Control':'no-store',Location:url.pathname+url.search}});}
  if(url.pathname.startsWith('/api/portal/'))return portalHandler(request,env,url);
  if(['/portal','/portal/','/portal.js','/portal.css'].includes(url.pathname)){
   if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405});
@@ -17,6 +26,6 @@ export default {async fetch(request,env) {
  if(url.pathname==='/style.css') return new Response(request.method==='HEAD'?null:css,{headers:{...security,'Content-Type':'text/css;charset=utf-8','Cache-Control':'public,max-age=3600'}});
  if(url.pathname==='/app.js') return new Response(request.method==='HEAD'?null:client,{headers:{...security,'Content-Type':'text/javascript;charset=utf-8','Cache-Control':'public,max-age=300'}});
  const path=url.pathname.endsWith('/')?url.pathname:url.pathname+'/';
- if(pages[path]) return new Response(request.method==='HEAD'?null:pages[path],{headers:{...security,'Content-Type':'text/html;charset=utf-8','Cache-Control':'public,max-age=300'}});
+ if(pages[path]) return new Response(request.method==='HEAD'?null:pages[path],{headers:{...security,'Content-Type':'text/html;charset=utf-8','Cache-Control':'private,no-cache',Vary:'Cookie'}});
  return new Response(request.method==='HEAD'?null:'404 — Page not found. /en-IE/',{status:404,headers:{...security,'Content-Type':'text/plain;charset=utf-8'}});
 }};

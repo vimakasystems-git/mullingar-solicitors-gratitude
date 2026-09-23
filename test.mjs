@@ -4,7 +4,7 @@ import worker from './dist/worker.mjs';
 import {content,languages} from './content.mjs';
 test('all translated routes render complete content with valid internal links and privacy headers',async()=>{
  for(const lang of Object.keys(languages)){
-  const response=await worker.fetch(new Request('https://example.test/'+lang+'/'));
+  const response=await worker.fetch(new Request('https://example.test/'+lang+'/',{headers:{Cookie:'nd_language='+lang}}));
   assert.equal(response.status,200);
   assert.match(response.headers.get('Content-Security-Policy'),/form-action 'none'/);
   const html=await response.text();

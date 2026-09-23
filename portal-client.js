@@ -1,7 +1,7 @@
 const params=new URLSearchParams(location.search), lang=portalCopy[params.get('lang')]?params.get('lang'):'en-IE',t=portalCopy[lang];
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fragment=new URLSearchParams(location.hash.slice(1)),setupToken=fragment.get('setup'),inviteToken=fragment.get('invite');if(location.hash)history.replaceState(null,'',location.pathname+location.search);
-document.documentElement.lang=lang;$('#language').value=lang;$('#language').onchange=e=>{location.search='?lang='+e.target.value};$('#title').textContent=t.portal;$('#intro').textContent=t.intro;$('#notice').textContent=t.privateNotice;
+document.documentElement.lang=lang;$('#language').value=lang;$('#language').onchange=e=>{location.href='/language?target=portal&lang='+e.target.value};$('#title').textContent=t.portal;$('#intro').textContent=t.intro;$('#notice').textContent=t.privateNotice;
 let state={},tab='overview',scanImage=null,rotation=0,scanned=[];
 const money=v=>new Intl.NumberFormat(lang,{style:'currency',currency:'EUR'}).format(v/100),date=v=>new Intl.DateTimeFormat(lang,{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Dublin'}).format(new Date(v));
 const field=(name,label,type='text',value='',extra='')=>`<label>${esc(label)}<input name="${name}" type="${type}" value="${esc(value)}" ${extra}></label>`;
