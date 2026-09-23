@@ -39,4 +39,3 @@ Content is general information, not legal advice or a legal-compliance certifica
 ## Validation
 
 `npm test` checks all five routes, page language, gratitude copy, internal anchors, contact links, security headers, default redirect, HEAD, invalid paths and disallowed methods. Manual browser checks cover layout, language switching and expandable FAQs. The Worker serves the image locally and makes no outbound requests.
-

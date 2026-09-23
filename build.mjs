@@ -1,0 +1,10 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {render} from './render.mjs';
+import {languages} from './content.mjs';
+await mkdir('dist',{recursive:true});
+const pages=Object.fromEntries(Object.keys(languages).map(lang=>['/'+lang+'/',render(lang)]));
+const css=await readFile('style.css','utf8');
+const hero=(await readFile('assets/hero.jpg')).toString('base64');
+const runtime=await readFile('worker-runtime.txt','utf8');
+await writeFile('dist/worker.mjs',`const pages=${JSON.stringify(pages)};\nconst css=${JSON.stringify(css)};\nconst hero=${JSON.stringify(hero)};\n${runtime}`);
+console.log('Built 5 translated pages and Cloudflare Worker.');
