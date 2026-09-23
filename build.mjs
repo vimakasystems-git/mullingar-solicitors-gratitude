@@ -1,10 +1,15 @@
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {render} from './render.mjs';
 import {languages} from './content.mjs';
+import {intakeCopy} from './intake-copy.mjs';
 await mkdir('dist',{recursive:true});
-const pages=Object.fromEntries(Object.keys(languages).map(lang=>['/'+lang+'/',render(lang)]));
-const css=await readFile('style.css','utf8');
+const css=await readFile('style.css','utf8')+'\n'+await readFile('intake.css','utf8');
+const client='const copy='+JSON.stringify(intakeCopy)+';\n'+await readFile('app-client.js','utf8');
+const version=createHash('sha256').update(css+client).digest('hex').slice(0,12);
+const pages=Object.fromEntries(Object.keys(languages).map(lang=>['/'+lang+'/',render(lang).replace('/style.css"',`/style.css?v=${version}"`).replace('/app.js"',`/app.js?v=${version}"`)]));
 const hero=(await readFile('assets/hero.jpg')).toString('base64');
 const runtime=await readFile('worker-runtime.txt','utf8');
-await writeFile('dist/worker.mjs',`const pages=${JSON.stringify(pages)};\nconst css=${JSON.stringify(css)};\nconst hero=${JSON.stringify(hero)};\n${runtime}`);
+const intake=await readFile('intake-runtime.txt','utf8');
+await writeFile('dist/worker.mjs',`const pages=${JSON.stringify(pages)};\nconst css=${JSON.stringify(css)};\nconst hero=${JSON.stringify(hero)};\nconst client=${JSON.stringify(client)};\n${intake}\n${runtime}`);
 console.log('Built 5 translated pages and Cloudflare Worker.');
