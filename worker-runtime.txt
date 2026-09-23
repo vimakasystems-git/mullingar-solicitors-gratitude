@@ -1,6 +1,9 @@
 const security = {'X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY','X-Robots-Tag':'noindex, nofollow','Content-Security-Policy':"default-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",'Permissions-Policy':'camera=(), microphone=(), geolocation=()'};
 export default {async fetch(request,env) {
  const url=new URL(request.url);
+ if(photoSources[url.pathname]&&['GET','HEAD'].includes(request.method)){
+  try{const upstream=await fetch(photoSources[url.pathname],{headers:{'User-Agent':'MullingarGratitudeWebsite/1.0'},cf:{cacheTtl:86400,cacheEverything:true},signal:AbortSignal.timeout(12000)});if(!upstream.ok||!upstream.headers.get('Content-Type')?.startsWith('image/'))throw new Error('image');return new Response(request.method==='HEAD'?null:upstream.body,{headers:{...security,'Content-Type':'image/jpeg','Cache-Control':'public,max-age=86400'}});}catch{return new Response(null,{status:502,headers:{...security,'Cache-Control':'no-store'}});}
+ }
  const chosenLanguage=request.headers.get('Cookie')?.match(/(?:^|;\s*)nd_language=(en-IE|pt-BR|pl|ro|uk)(?:;|$)/)?.[1];
  if(url.pathname==='/language'&&request.method==='GET'){
   const selected=['en-IE','pt-BR','pl','ro','uk'].includes(url.searchParams.get('lang'))?url.searchParams.get('lang'):'en-IE';
