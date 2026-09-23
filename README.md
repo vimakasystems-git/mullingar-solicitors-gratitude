@@ -55,12 +55,10 @@ Content is general information, not legal advice or a legal-compliance certifica
 
 Research did not locate a supported, documented public API for individual Irish case status. Added official High Court search, Courts Portal, judgments and record-access links. No scraping, credentials or private court data is used. Open court statistics are distinct from access to individual case files. See COURT-RESEARCH.md.
 
-## Additional validation
-
 ## Private client portal
 
 The five-language `/portal/` adds administrator invitations and revocation, encrypted client documents, local upload, mobile photo-to-PDF scanning, server-calculated service estimates with VAT, solicitor approval and written costs notices, Stripe Checkout/webhook integration, appointment slots and private meeting links. Seven test groups now cover the website, AI intake and portal. See [PORTAL-SETUP.md](PORTAL-SETUP.md) for activation, provider setup, verified features and limitations.
 
 No real administrator or client account has been created. Actual service rates, Stripe keys and Google Drive/Dropbox app identifiers must be supplied by the office. These external integrations stay disabled until configured. The database and encryption secrets are deployed; local uploads and scanning require an administrator-invited login. The private activation link is delivered outside Git.
 
-Five Node test groups cover routes, consent, origin, bounded input, role injection, model binding, no-store responses, rate limiting, unavailable provider and long-summary errors. Live synthetic enquiries validate multilingual response and English handover; no test emails are sent to the practice.
+The original five Node test groups cover routes and AI intake; two additional groups exercise the portal against SQLite. Live synthetic enquiries validate multilingual response and English handover; no test emails are sent to the practice.
