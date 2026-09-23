@@ -1,0 +1,364 @@
+{
+  "fetchedAt": "2026-09-23",
+  "pages": [
+    {
+      "file": "pages/6717.json"
+    },
+    {
+      "file": "pages/6663.json"
+    },
+    {
+      "file": "pages/5541.json"
+    },
+    {
+      "file": "pages/5077.json"
+    },
+    {
+      "file": "pages/4623.json"
+    },
+    {
+      "file": "pages/4619.json"
+    },
+    {
+      "file": "pages/4612.json"
+    },
+    {
+      "file": "pages/4608.json"
+    },
+    {
+      "file": "pages/4604.json"
+    },
+    {
+      "file": "pages/4600.json"
+    },
+    {
+      "file": "pages/4596.json"
+    },
+    {
+      "file": "pages/4571.json"
+    },
+    {
+      "file": "pages/4567.json"
+    },
+    {
+      "file": "pages/4537.json"
+    },
+    {
+      "file": "pages/4472.json"
+    },
+    {
+      "file": "pages/4449.json"
+    },
+    {
+      "file": "pages/4433.json"
+    },
+    {
+      "file": "pages/4426.json"
+    },
+    {
+      "file": "pages/4402.json"
+    },
+    {
+      "file": "pages/4354.json"
+    },
+    {
+      "file": "pages/1697.json"
+    },
+    {
+      "file": "pages/2195.json"
+    },
+    {
+      "file": "pages/1833.json"
+    },
+    {
+      "file": "pages/1822.json"
+    },
+    {
+      "file": "pages/1318.json"
+    },
+    {
+      "file": "pages/1832.json"
+    },
+    {
+      "file": "pages/6956.json"
+    },
+    {
+      "file": "pages/6942.json"
+    },
+    {
+      "file": "pages/6921.json"
+    },
+    {
+      "file": "pages/6828.json"
+    },
+    {
+      "file": "pages/6813.json"
+    },
+    {
+      "file": "pages/6798.json"
+    },
+    {
+      "file": "pages/6781.json"
+    },
+    {
+      "file": "pages/6748.json"
+    },
+    {
+      "file": "pages/6037.json"
+    },
+    {
+      "file": "pages/6022.json"
+    },
+    {
+      "file": "pages/6008.json"
+    },
+    {
+      "file": "pages/5994.json"
+    },
+    {
+      "file": "pages/5976.json"
+    },
+    {
+      "file": "pages/5950.json"
+    },
+    {
+      "file": "pages/4984.json"
+    }
+  ],
+  "menu": [
+    {
+      "label": "ABOUT",
+      "href": "/en-IE/about-us/",
+      "children": [
+        {
+          "label": "Our Partners",
+          "href": "/en-IE/about-us/#partners",
+          "children": []
+        },
+        {
+          "label": "Our Team",
+          "href": "/en-IE/about-us/#team",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "TESTIMONIALS",
+      "href": "/en-IE/testimonials/",
+      "children": []
+    },
+    {
+      "label": "PRIVATE",
+      "href": "/en-IE/private-services/",
+      "children": [
+        {
+          "label": "Property Law",
+          "href": "/en-IE/private-services/property-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Wills & Probate",
+          "href": "/en-IE/private-services/wills-and-probate-3/",
+          "children": []
+        },
+        {
+          "label": "Civil Litigation",
+          "href": "/en-IE/private-services/litigation-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Family Law",
+          "href": "/en-IE/private-services/family-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Criminal Law",
+          "href": "/en-IE/private-services/criminal-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Employment Law",
+          "href": "/en-IE/private-services/employment-law-solicitors/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "COMMERCIAL",
+      "href": "/en-IE/commercial-services/",
+      "children": [
+        {
+          "label": "Company Law",
+          "href": "/en-IE/commercial-services/company-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Commercial Law",
+          "href": "/en-IE/commercial-services/commercial-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Property Law",
+          "href": "/en-IE/commercial-services/property-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Criminal Law",
+          "href": "/en-IE/commercial-services/criminal-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Civil Litigation",
+          "href": "/en-IE/commercial-services/litigation-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Employment Law",
+          "href": "/en-IE/commercial-services/employment-law-solicitors/",
+          "children": []
+        },
+        {
+          "label": "Licensing Law",
+          "href": "/en-IE/commercial-services/licensing-law-solicitors/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "NOTARY",
+      "href": "/en-IE/notary-public/",
+      "children": []
+    },
+    {
+      "label": "BLOG",
+      "href": "/en-IE/blog-articles/",
+      "children": []
+    },
+    {
+      "label": "CONTACT US",
+      "href": "/en-IE/contact-us/",
+      "children": []
+    }
+  ],
+  "assets": {
+    "/source-image/c726b020f38f81e3": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/NDSOL-702-x-936-px-sj-3.png",
+    "/source-image/26d267aec159a401": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-banner-2-1.png",
+    "/source-image/cd6d567ed9c630f5": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/0_2-8-1.webp",
+    "/source-image/64ecd304c237749c": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/books-2.webp",
+    "/source-image/a18d6b5833ac989b": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/54.png",
+    "/source-image/7c27482c4cfdaaca": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-13.png",
+    "/source-image/6305250cfde0fb3c": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/62.png",
+    "/source-image/3064308212afafbd": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/17.png",
+    "/source-image/fefb96c5e9c56609": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/9.png",
+    "/source-image/4865ffb22f570aef": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/19.png",
+    "/source-image/c51d5fced8912c57": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/15.png",
+    "/source-image/5e71d2194fa04a7c": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/13.png",
+    "/source-image/9aec61b86897d666": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/4.png",
+    "/source-image/5db2313b4c9912a1": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/1.png",
+    "/source-image/78798046308146a3": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/2.png",
+    "/source-image/5ac75699f446b428": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/57.png",
+    "/source-image/38dd91a1f762b620": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/15.png",
+    "/source-image/b5a50761e4bfaf06": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/11.png",
+    "/source-image/cc8b04b9d59d46e3": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/NDSOL-cover.png",
+    "/source-image/c4ba9bff78982eae": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-3-partners-2-2.png",
+    "/source-image/802a5d236eea86d1": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/feedback-icon-red.gif",
+    "/source-image/0f526696120bb90f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/0_3-6-1.webp",
+    "/source-image/5aebe6f459f50e3c": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/blog-articles-cta.webp",
+    "/source-image/c93f715be5ddffff": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-702-x-936-px-lk-2.png",
+    "/source-image/186f1acccafc7723": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/feedback-icon-navy.gif",
+    "/source-image/b1998cd3f2210bec": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-702-x-936-px-mj.png",
+    "/source-image/5a93ef9488ccc041": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-702-x-936-px-sj-3.png",
+    "/source-image/549da51c2741d830": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-matt-signature-e1707740585227.png",
+    "/source-image/c2caabe90aed8286": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/Shane-Johnston-Louis-Kiernan-Matthew-Johnston-Nooney-and-Dowdall-LLP-Solicitors.png",
+    "/source-image/f4486eabd38d7c95": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-702-x-936-px-ef.png",
+    "/source-image/a5a9cec27a0d5dcc": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/NDSOL-702-x-936-px-sn.png",
+    "/source-image/999d1aad941a9f88": "https://mullingarsolicitors.ie/wp-content/uploads/2024/09/20.png",
+    "/source-image/546fc7f83c4e37d0": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/9.png",
+    "/source-image/8ec15b3c8a1d2c5f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/NDSOL-702-x-936-px-ndsol-2.webp",
+    "/source-image/e38635dcb7a5984f": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/24.png",
+    "/source-image/84b7f259932763db": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/10.png",
+    "/source-image/296a2be7d371310d": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/26-1.png",
+    "/source-image/1159b878323488c3": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/25.png",
+    "/source-image/88da0d6ba9a26433": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/23.png",
+    "/source-image/2471a2dea2a8665b": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/27-1.png",
+    "/source-image/feb98772a2eb42d9": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/14.png",
+    "/source-image/4dedaf806ab79d6a": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/7.png",
+    "/source-image/9510bbc4ee908a87": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/15.png",
+    "/source-image/b4ea6b6a9177cef1": "https://mullingarsolicitors.ie/wp-content/uploads/2024/09/21.png",
+    "/source-image/fd6fff6b9c36f90f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/comp-law.webp",
+    "/source-image/309ebacbee2df134": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/commercial.webp",
+    "/source-image/4c5a003474bea565": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/0_2-22.webp",
+    "/source-image/5d28c6514bda64fc": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/desk-with-paper.png",
+    "/source-image/fb6f5f79808c84fc": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/civil-litigation-visual.png",
+    "/source-image/e3858fe909960837": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/employment-law-visual.png",
+    "/source-image/8626b105d5d40d7d": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/2-business-men.png",
+    "/source-image/f7599933ee177420": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/property-law.webp",
+    "/source-image/7b7322a5b9861d7a": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/wills-and-probate.png",
+    "/source-image/7e33c6d891174eef": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/civil-litigation-private.png",
+    "/source-image/aff39cfa1ba53fc2": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/family-walking-in-park.webp",
+    "/source-image/8e94d827d5d3483a": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/police-car.webp",
+    "/source-image/a464767f3d3830fb": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/licensing.webp",
+    "/source-image/0a60dbb15c4ffd4c": "https://mullingarsolicitors.ie/wp-content/uploads/2024/01/young-couple-walking-2.webp",
+    "/source-image/95257efb5f4bf04d": "https://mullingarsolicitors.ie/wp-content/uploads/2024/02/businessman.png",
+    "/source-image/990d1b3b49d704e1": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-11-1024x576.png",
+    "/source-image/e0d9a78ca153bd1f": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-12-1024x576.png",
+    "/source-image/876690a0eca38be3": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-10-1024x576.png",
+    "/source-image/67f2371c74934dd6": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-14-1024x576.png",
+    "/source-image/d4e2535024d7f1df": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-13-1024x576.png",
+    "/source-image/5ab1ba98b0e4ee23": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-8-1024x576.png",
+    "/source-image/ea6b26cb97001e74": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-7-1024x576.png",
+    "/source-image/f291a35aa4025d8c": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-4-1024x576.png",
+    "/source-image/0fc8144e4215f8a5": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-6-1024x576.png",
+    "/source-image/b3ca677cc0061a6a": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-5-1024x576.png",
+    "/source-image/01c6b85f9435134a": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/66-1024x576.png",
+    "/source-image/0c4e2ee2a4431f9b": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-1024x576.png",
+    "/source-image/3af5fa066b6fa5fd": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-2-1024x576.png",
+    "/source-image/d1d58ec5e456bb0d": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-1-1024x576.png",
+    "/source-image/1543f91ac306b1f8": "https://mullingarsolicitors.ie/wp-content/uploads/2026/03/image-3-1024x576.png",
+    "/source-image/29315e9b509d5753": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/34.png",
+    "/source-image/13b89993b546031f": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/68.png",
+    "/source-image/b3deda38eac1d44b": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/67.png",
+    "/source-image/d1eeabf2cddc781e": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/75.png",
+    "/source-image/8243d841fd212ff2": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/70.png",
+    "/source-image/1cb23c996efbe5b8": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/48.png",
+    "/source-image/fb10449efe2433b5": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/15-1.png",
+    "/source-image/2281b4eb5f0176e9": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/42.png",
+    "/source-image/c666d055e4c86e65": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/41.png",
+    "/source-image/6e5031ca9f7ab0f9": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/40.png",
+    "/source-image/b203d0c208a93184": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/31.png",
+    "/source-image/d1dafd7bbc89855c": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/12.png",
+    "/source-image/9d0ce4702e04099e": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/32.png",
+    "/source-image/c75bec517afc3fda": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/24.png",
+    "/source-image/77f6b6ddab789038": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/54.png",
+    "/source-image/30b732d2054ce3f0": "https://mullingarsolicitors.ie/wp-content/uploads/2025/07/25.png",
+    "/source-image/362c3f3bc02dd7e9": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/13-1.png",
+    "/source-image/3408fce953553ab4": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/30.png",
+    "/source-image/5ea93ad846a6f27d": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/14-1.png",
+    "/source-image/fed02ae3ede1eacc": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/4-1.png",
+    "/source-image/076b6d81f021944f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/25.png",
+    "/source-image/afd017d66a516bfb": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/18.png",
+    "/source-image/4f8d95bb2a7b3212": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/54.png",
+    "/source-image/e4620a8e24282c79": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/11-1.png",
+    "/source-image/f8c403a3ac36d594": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/24.png",
+    "/source-image/76370e9ed3ce5991": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/12.png",
+    "/source-image/d4d078244c2517e0": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/49.png",
+    "/source-image/af3c340dbe7d4f80": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/6.png",
+    "/source-image/7dd9d36ab516e3e3": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/7.png",
+    "/source-image/1d73a16acad1b6d6": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/31.png",
+    "/source-image/da906bd49d3c513c": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/32.png",
+    "/source-image/6f83bb10b7b13ca6": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/19.png",
+    "/source-image/8e9e886619d6f6a1": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/22.png",
+    "/source-image/78c20089e0e10162": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/47.png",
+    "/source-image/d8895167830f783c": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/5-1.png",
+    "/source-image/38ffa1d263415377": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/27.png",
+    "/source-image/0b553524bed387b7": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/52.png",
+    "/source-image/90cf7442cd32c049": "https://mullingarsolicitors.ie/wp-content/uploads/2024/10/48.png",
+    "/source-image/da9c4ce0cf850c6a": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/11.png",
+    "/source-image/41c31cc9e18f4d8f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/8.png",
+    "/source-image/f522874d5c7c2f7d": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/12.png",
+    "/source-image/99020a383556256b": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/10.png",
+    "/source-image/172eb737616c9a74": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/9.png",
+    "/source-image/9889412fbaf1a09f": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/7.png",
+    "/source-image/7c93a547753b4f11": "https://mullingarsolicitors.ie/wp-content/uploads/2024/03/13.png"
+  }
+}

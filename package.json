@@ -6,6 +6,6 @@
   "scripts": {
     "build": "node build.mjs",
     "dev": "node dev.mjs",
-    "test": "node --test test.mjs portal-test.mjs"
+    "test": "node --test test.mjs portal-test.mjs source-test.mjs"
   }
 }
